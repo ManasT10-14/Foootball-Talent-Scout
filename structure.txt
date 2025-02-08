@@ -1,0 +1,29 @@
+Football-Talent-Scout/
+│── data/               # Store raw & processed datasets
+│   ├── fifa_players.csv
+│   ├── processed_data.csv
+│
+│── notebooks/          # Jupyter Notebooks for EDA & model experiments
+│   ├── 01_eda.ipynb
+│   ├── 02_model_training.ipynb
+│   ├── 03_model_evaluation.ipynb
+│
+│── src/                # Main project source code
+│   ├── data_loader.py   # Load & preprocess data
+│   ├── model.py         # Define ML models (use OOP for flexibility)
+│   ├── train.py         # Train and save the model
+│   ├── predict.py       # Load model and make predictions
+│
+│── models/             # Saved trained models
+│   ├── football_model.pkl
+│
+│── reports/            # Visualizations & analysis reports
+│   ├── feature_correlation.png
+│   ├── predictions_vs_actuals.png
+│
+│── app/                # (Optional) Streamlit or Flask web app
+│   ├── app.py
+│
+│── requirements.txt    # List dependencies (pandas, sklearn, matplotlib, etc.)
+│── README.md           # Project documentation
+│── .gitignore          # Ignore unnecessary files
