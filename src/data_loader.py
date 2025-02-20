@@ -1,10 +1,10 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-
+import os
 class DataLoader:
     def __init__(self):
-        self.dataAddress = "../data/FINAL_fifa_players.csv"
+        self.dataAddress = os.path.join(os.path.dirname(__file__), "..", "data", "FINAL_fifa_players.csv")
 
     def load_data(self):
         data = pd.read_csv(self.dataAddress)
