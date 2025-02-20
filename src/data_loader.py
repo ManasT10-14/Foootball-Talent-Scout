@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 class DataLoader:
     def __init__(self):
-        self.dataAddress = "data/FINAL_fifa_players.csv"
+        self.dataAddress = "../data/FINAL_fifa_players.csv"
 
     def load_data(self):
         data = pd.read_csv(self.dataAddress)
@@ -15,9 +15,6 @@ class DataLoader:
         attackerData = data[data["player_role"] == "Attacker"]
         attackerFeatures = [
         "age",                 # Essential for growth prediction  
-        "height_cm",           # Affects aerial play & physicality  
-        "weight_kgs",          # Strength & balance impact  
-        "overall_rating",      # Baseline skill level  
 
         "ball_control",        # Key for dribbling & first touch  
         "dribbling",           # Crucial for beating defenders  
@@ -42,9 +39,6 @@ class DataLoader:
         defenderData = data[data["player_role"] == "Defender"]
         defenderFeatures = [
     "age",                 # Essential for growth prediction  
-    "height_cm",           # Taller defenders have better aerial ability  
-    "weight_kgs",          # Affects physical strength in duels  
-    "overall_rating",      # Baseline skill level  
 
     "standing_tackle",     # Crucial for defensive ability  
     "sliding_tackle",      # Important for last-ditch challenges  
@@ -66,7 +60,6 @@ class DataLoader:
         midfielderData = data[data["player_role"] == "Midfielder"]
         midfielderFeatures = [
         "age",                 # Essential for potential prediction  
-        "overall_rating",      # Baseline skill level  
         "ball_control",        # Crucial for maintaining possession  
         "dribbling",           # Important for progressing the ball  
         "short_passing",       # Key skill for quick link-up play  
@@ -90,9 +83,6 @@ class DataLoader:
         goalkeeperData = data[data["player_role"] == "Goalkeeper"]
         goalkeeperFeatures = [
         "age",                 # Essential for growth prediction  
-        "height_cm",           # Taller goalkeepers cover more area  
-        "weight_kgs",          # Affects strength in aerial duels  
-        "overall_rating",      # Baseline skill level  
 
         "reactions",           # Quick reflexes for shot-stopping  
         "composure",           # Staying calm under pressure  
@@ -112,7 +102,6 @@ class DataLoader:
         midAttackerData = data[data["player_role"] == "Mid Attacker"]
         midAttackerFeatures = [
         "age",                 # Essential for potential prediction  
-        "overall_rating",      # Baseline skill level  
         "dribbling",           # Key for beating defenders  
         "ball_control",        # Crucial for close control in attacking areas  
         "short_passing",       # Needed for quick link-up play and creating chances  
@@ -134,7 +123,6 @@ class DataLoader:
         midDefenderData = data[data["player_role"] == "Mid Defender"]
         midDefenderFeatures = [
         "age",                 # Essential for potential prediction  
-        "overall_rating",      # Baseline skill level  
         "short_passing",       # Important for distributing play  
         "ball_control",        # Helps in controlling the midfield  
         "reactions",           # Quick decision-making under pressure  

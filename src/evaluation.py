@@ -15,6 +15,6 @@ for position in positions:
     R2_score = r2_score(y_test,potential_predicted)
     metric_data+= f"{position} Model:\nRMSE: {RMSE}\nR2_score: {R2_score}\n\n"
 
-    dump(best_model,f"models/{position} model.pkl")
-with open("models/metric.txt","w") as file:
+    dump(best_model,f"../models/{position}_model.pkl")
+with open("../models/metric.txt","w") as file:
     file.write(metric_data)
